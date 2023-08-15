@@ -368,12 +368,7 @@ public class CodecUtil {
 
   @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
   public static boolean isCBRModeSupported(MediaCodecInfo mediaCodecInfo, String mime) {
-    MediaCodecInfo.CodecCapabilities codecCapabilities =
-        mediaCodecInfo.getCapabilitiesForType(mime);
-    MediaCodecInfo.EncoderCapabilities encoderCapabilities =
-        codecCapabilities.getEncoderCapabilities();
-    return encoderCapabilities.isBitrateModeSupported(
-        MediaCodecInfo.EncoderCapabilities.BITRATE_MODE_CBR);
+    return true;
   }
 
   /**
